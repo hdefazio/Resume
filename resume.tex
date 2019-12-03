@@ -1,0 +1,305 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Hannah}{DeFazio}{ 
+\href{mailto:defazihf@clarkson.edu}{defazihf@clarkson.edu | www.linkedin.com/in/hannah-defazio} | 315.944.7319
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+\subsection{\Large{}{Clarkson University}}
+\subsection{BS in Computer Science}
+\subsection{\normalsize{Minor in Mathematics}}
+\location{Expected: May 2020 | Potsdam, NY}
+\sectionsep
+\begin{tightemize}
+\item \underline{Honors Program, GPA: 3.654/4.0}
+\item \underline{1 year early graduation}
+
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     HONORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Honors}
+%\sectionsep
+\sectionsep
+\begin{tightemize}
+\item \underline{Honorable Mention} Poster Presentation in Computer Science and Engineering at Research and Project Showcase (RAPS)
+\item National Grid Stipend for Research Opportunities in Sustainable Energy
+\item Presidential Scholar (Spring 2018)
+\item Dean's List (Fall 2017, 2018)
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\runsubsection{Programming} \newline
+Python | C++ | CMake | 
+\newline MATLAB | Docker
+\sectionsep
+
+\runsubsection{Software Experience}
+\newline
+UNIX/Linux/Windows \newline
+Overleaf/LaTex \newline
+Django \newline
+Selenium \newline
+Git \newline
+OpenCV \newline
+KWIVER 
+\sectionsep
+
+\runsubsection{Technical Experience} \newline
+Computer Graphics \newline
+Deep Learning \newline
+Computer Vision \newline
+Machine Shop Training \newline
+Jetson TX2/ Nano \newline
+Raspberry Pi \newline
+Soldering \newline
+Agile Development
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LEADERSHIP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Leadership}
+\runsubsection{\normalsize{Resident Advisor}}
+\descript{}
+\runsubsection{\normalsize{Teaching Assistant for Pre-Calc}}
+\runsubsection{\normalsize{TARS Research Team Leader}}
+\descript{}
+\runsubsection{\normalsize{EID Social Ambassador @ GE}}
+\descript{}
+\runsubsection{\normalsize{FY100 Peer Educator/Grader}}
+\descript{}
+\runsubsection{\normalsize{Honors Webmaster}}
+\descript{}
+\runsubsection{\normalsize{Honors Peer Mentor}}
+\descript{}
+\runsubsection{\normalsize{Honors Recruiter}}
+\descript{}
+\runsubsection{\normalsize{Society of Women Engineers}}
+\descript{}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Professional Experience}
+
+\runsubsection{Research and Development Engineer}
+\descript{| Kitware Inc.}
+\location{May 2020 | Clifton Park, NY}
+\sectionsep
+\begin{tightemize}
+\item Incoming role on the Computer Vision team
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Security Engineering Intern}
+\descript{| General Electric Power}
+\location{May 2019 - August 2019 | Schenectady, NY}
+%\sectionsep
+\begin{tightemize}
+\item Designed filters on the team's website that narrow down the results displayed for a more intuitive user interface
+\item Implemented a testing framework with Django and Selenium to enable the team to reach comprehensive test coverage
+\item Researched and wrote comprehensive documentation on different SAST tools for Python3 projects
+\item Researched solutions to automate engineers' roles to save business cost
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Research and Development Intern}
+\descript{| Kitware Inc.}
+\location{January 2019 – May 2019 | Clifton Park, NY}
+%\sectionsep
+\begin{tightemize}
+\item Translated Jetson's pedestrian detector into KWIVER for pipeline execution
+\item Setup Clearpath's Jackal robot with a Jetson TX2 and ROS for autonomous deployment
+\item Developed Dockerfiles and Python scripts to setup Intel's OpenVino and Jetson's inference demos for performance analysis
+\item Translated an image reader from ROS to KWIVER for FlyCapture cameras in order to access and analyze live captures
+\item Created a face detector based on KWIVER with C++ and Python examples
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{TARS, Terascale All-sensing Research Studio}
+\descript{} 
+\location{October 2017 – Present | Clarkson University}
+\begin{tightemize}
+\item Lead a multidisciplinary 5 person team on adapting the hardware architecture of my assistive robot prototype to automatically control a microscope stage
+\item Worked on building a robot that analyses the walking gait of a subject and will intervene with assistance if it is deemed necessary. Nearly all the parts were custom made and printed in the lab
+\item Performed system integration to incorporate cognitive load classification framework with my robot control system. Demonstrated that my robotic arm could be controlled based on whether a person was predicted to need assistance. 
+\item Utilized machine learning to develop convolutional neural networks for detecting the level of liquids in bottles
+\end{tightemize}
+\sectionsep
+
+\runsubsection{CAMEL, Computer Architecture and Microprocessor Engineering Lab}
+\descript{} 
+\location{June 2017 – April 2018 | Clarkson University}
+\begin{tightemize}
+\item Solved dependencies for software installation on our heterogeneous high performance computer cluster
+\item Researched anomalies in data only exploits and the accuracy of hardware performance counters
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     OTHER EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Other Experience}
+%\runsubsection{Resident Advisor}
+%\descript{| Clarkson University}
+%\location{May 2018 – Present | Potsdam, NY}
+%\begin{tightemize}
+%\item Handled incident and emergency maintenance reports and executed social, educational, and community service programs 
+%\item Training included Active Shooter, Crisis and Mental Health, Diversity and Inclusion, and Title IX and Sexual Assault
+%\end{tightemize}
+%\sectionsep
+
+%\runsubsection{Teaching Assistant}
+%\descript{| Clarkson University}
+%\location{August 2019 - Present | Potsdam, NY}
+%\begin{tightemize}
+%\item Lead a recitation session for Pre-Calculus students
+%\end{tightemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Relevant Courses
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{minipage}[t]{0.55\linewidth} 
+%\section{Relevant Courses}
+%\runsubsection{Computer Science} 
+%\sectionsep
+%\begin{tightemize}
+%\runsubsection{\normalsize{Computer Vision (Fall '19)}} 
+%\descript{}
+%\runsubsection{\normalsize{Computer Graphics}} 
+%\descript{}
+%\runsubsection{\normalsize{Adv. Digital Circuit Design}} 
+%\descript{}
+%\runsubsection{\normalsize{Software Design \& Development}} 
+%\descript{}
+%\runsubsection{\normalsize{Computer Algorithms (Fall '19)}} 
+%\descript{}
+%%\end{tightemize}
+%\end{minipage}
+%\hfill
+%\begin{minipage}[t]{0.43\linewidth}
+%\sectionsep
+%\sectionsep
+%\sectionsep
+%\runsubsection{Mathematics}
+%\begin{tightemize}
+%\runsubsection{\normalsize{Applied Linear Algebra}}
+%\descript{}
+%\runsubsection{\normalsize{Automata Theory (Fall '19)}}
+%\descript{}
+%\runsubsection{\normalsize{Discrete Mathematics}}
+%\descript{}
+%\end{tightemize}
+%\end{minipage}
+
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
