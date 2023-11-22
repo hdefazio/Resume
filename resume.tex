@@ -47,7 +47,10 @@
 
 \documentclass[]{deedy-resume-openfont}
 \usepackage{fancyhdr}
- 
+\usepackage{fontawesome}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+
 \pagestyle{fancy}
 \fancyhf{}
  
@@ -66,8 +69,9 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \namesection{Hannah}{DeFazio}{ 
-\href{mailto:defazihf@clarkson.edu}{defazihf@clarkson.edu | www.linkedin.com/in/hannah-defazio} | 315.944.7319
-}
+{ \faEnvelope\ h2defazio@gmail.com | \faPhone\  315.944.7319 |
+ \faLinkedinSquare\ \href{https://www.linkedin.com/in/hannah-defazio/}{hannah-defazio} | \faGithub\ \href{https://github.com/hdefazio}{hdefazio}  
+}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,104 +80,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.33\textwidth} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Education}
-\subsection{\Large{}{Clarkson University}}
-\subsection{BS in Computer Science}
-\subsection{\normalsize{Minor in Mathematics}}
-\location{Expected: May 2020 | Potsdam, NY}
-\sectionsep
-\begin{tightemize}
-\item \underline{Honors Program, GPA: 3.654/4.0}
-\item \underline{1 year early graduation}
-
-\end{tightemize}
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     HONORS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Honors}
-%\sectionsep
-\sectionsep
-\begin{tightemize}
-\item \underline{Honorable Mention} Poster Presentation in Computer Science and Engineering at Research and Project Showcase (RAPS)
-\item National Grid Stipend for Research Opportunities in Sustainable Energy
-\item Presidential Scholar (Spring 2018)
-\item Dean's List (Fall 2017, 2018)
-\end{tightemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Skills}
-\runsubsection{Programming} \newline
-Python | C++ | CMake | 
-\newline MATLAB | Docker
-\sectionsep
-
-\runsubsection{Software Experience}
-\newline
-UNIX/Linux/Windows \newline
-Overleaf/LaTex \newline
-Django \newline
-Selenium \newline
-Git \newline
-OpenCV \newline
-KWIVER 
-\sectionsep
-
-\runsubsection{Technical Experience} \newline
-Computer Graphics \newline
-Deep Learning \newline
-Computer Vision \newline
-Machine Shop Training \newline
-Jetson TX2/ Nano \newline
-Raspberry Pi \newline
-Soldering \newline
-Agile Development
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LEADERSHIP
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Leadership}
-\runsubsection{\normalsize{Resident Advisor}}
-\descript{}
-\runsubsection{\normalsize{Teaching Assistant for Pre-Calc}}
-\runsubsection{\normalsize{TARS Research Team Leader}}
-\descript{}
-\runsubsection{\normalsize{EID Social Ambassador @ GE}}
-\descript{}
-\runsubsection{\normalsize{FY100 Peer Educator/Grader}}
-\descript{}
-\runsubsection{\normalsize{Honors Webmaster}}
-\descript{}
-\runsubsection{\normalsize{Honors Peer Mentor}}
-\descript{}
-\runsubsection{\normalsize{Honors Recruiter}}
-\descript{}
-\runsubsection{\normalsize{Society of Women Engineers}}
-\descript{}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.66\textwidth} 
+\begin{minipage}[t]{0.7\textwidth} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
@@ -183,10 +90,22 @@ Agile Development
 
 \runsubsection{Research and Development Engineer}
 \descript{| Kitware Inc.}
-\location{May 2020 | Clifton Park, NY}
+\location{May 2020 - present | Carrboro, NC}
 \sectionsep
 \begin{tightemize}
-\item Incoming role on the Computer Vision team
+\item Head programmer and scrum master on the DARPA PTG Kitware team
+\item Contributes to Kitware’s open-source platforms (KWIVER, SMQTK, Girder) on the Computer Vision team
+    \vspace{3pt}
+    \begin{tightemize}
+    \item Kitware Image and Video Exploitation and Retrieval (KWIVER)
+    \item Social Multimedia Query ToolKit (SMQTK)
+    \end{tightemize}
+    \vspace{5pt}
+\item Leads the training and development of machine learning models for our multi-task monitoring system 
+\item Handles machine learning experiments; Presents and documents results for evaluation with the team
+\item Containerizes and integrates disinformation analytics into APIs for evaluation on the DARPA SemaFor project
+
+%\item Managing shared machine resources using SLURM
 \end{tightemize}
 \sectionsep
 
@@ -195,23 +114,28 @@ Agile Development
 \location{May 2019 - August 2019 | Schenectady, NY}
 %\sectionsep
 \begin{tightemize}
-\item Designed filters on the team's website that narrow down the results displayed for a more intuitive user interface
+%\item Designed filters on the team's website that narrow down the results displayed for a more intuitive user interface
 \item Implemented a testing framework with Django and Selenium to enable the team to reach comprehensive test coverage
-\item Researched and wrote comprehensive documentation on different SAST tools for Python3 projects
-\item Researched solutions to automate engineers' roles to save business cost
+\item Researched and wrote comprehensive documentation on different SAST tools for Python projects
+%\item Researched solutions to automate engineers' roles to save business cost
+%\item Coordinated social events for other interns as the EID Social Ambassador
 \end{tightemize}
 \sectionsep
 
 \runsubsection{Research and Development Intern}
 \descript{| Kitware Inc.}
 \location{January 2019 – May 2019 | Clifton Park, NY}
-%\sectionsep
 \begin{tightemize}
-\item Translated Jetson's pedestrian detector into KWIVER for pipeline execution
-\item Setup Clearpath's Jackal robot with a Jetson TX2 and ROS for autonomous deployment
-\item Developed Dockerfiles and Python scripts to setup Intel's OpenVino and Jetson's inference demos for performance analysis
-\item Translated an image reader from ROS to KWIVER for FlyCapture cameras in order to access and analyze live captures
+\item Translated Jetson's pedestrian detector and a FlyCapture image reader into C++/CMake KWIVER projects for Sprokit pipeline execution
+    \vspace{3pt}
+    \begin{tightemize}
+    \item Stream Processing Toolkit (Sprokit)
+    \end{tightemize}
+    \vspace{5pt}
 \item Created a face detector based on KWIVER with C++ and Python examples
+%\item Setup Clearpath's Jackal robot with a Jetson TX2 and ROS for autonomous deployment
+\item Developed Dockerfiles and Python scripts to setup Intel's OpenVino and Jetson's inference demos for performance analysis
+
 \end{tightemize}
 \sectionsep
 
@@ -222,23 +146,53 @@ Agile Development
 \section{Research}
 \runsubsection{TARS, Terascale All-sensing Research Studio}
 \descript{} 
-\location{October 2017 – Present | Clarkson University}
+\location{October 2017 – May 2022 | Clarkson University}
 \begin{tightemize}
-\item Lead a multidisciplinary 5 person team on adapting the hardware architecture of my assistive robot prototype to automatically control a microscope stage
-\item Worked on building a robot that analyses the walking gait of a subject and will intervene with assistance if it is deemed necessary. Nearly all the parts were custom made and printed in the lab
-\item Performed system integration to incorporate cognitive load classification framework with my robot control system. Demonstrated that my robotic arm could be controlled based on whether a person was predicted to need assistance. 
-\item Utilized machine learning to develop convolutional neural networks for detecting the level of liquids in bottles
+\item Developed tools to allow the allocation of nodes in a drone cluster to be determined by hardware quality and additional resources such as cameras [M.S. Thesis]
+%\item Led a multidisciplinary 7 person team on creating the hardware architecture of an assistive robot prototype
+\item Led a multidisciplinary 7 person team on creating the hardware and software architecture of an assistive robot prototype [Honors Thesis]
+\item Performed system integration to demonstrate that the prototype robotic arm could be controlled based on whether a person was predicted to need assistance 
 \end{tightemize}
 \sectionsep
 
-\runsubsection{CAMEL, Computer Architecture and Microprocessor Engineering Lab}
-\descript{} 
-\location{June 2017 – April 2018 | Clarkson University}
+%\runsubsection{CAMEL, Computer Architecture and Microprocessor Engineering Lab}
+%\descript{} 
+%\location{June 2017 – April 2018 | Clarkson University}
+%\begin{tightemize}
+%\item Solved dependencies for software installation on our heterogeneous high %performance computer cluster
+%\item Researched anomalies in data only exploits and the accuracy of hardware %performance counters
+%\end{tightemize}
+%\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LEADERSHIP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Leadership}
+\runsubsection{Scrum Master}
+\descript{| Kitware Inc}
+\location{May 2023 - present | Carrboro, NC}
 \begin{tightemize}
-\item Solved dependencies for software installation on our heterogeneous high performance computer cluster
-\item Researched anomalies in data only exploits and the accuracy of hardware performance counters
+\item Leads scrum ceremonies, ensuring adherence to agile principles and facilitating an environment of trust within the team
+\item Adapts to evolving project needs while maintaining a focus on meeting project goals and balancing concurrent projects' timelines
 \end{tightemize}
 \sectionsep
+
+\runsubsection{Intern Team Leader}
+\descript{| Kitware Inc}
+\location{Summer 2023 | Carrboro, NC}
+\begin{tightemize}
+\item Onboarded and mentored interns on the code review process, good software practices, and creating a positive culture at Kitware
+\end{tightemize}
+\sectionsep
+
+%\runsubsection{Resident Advisor}
+%\descript{| Clarkson University}
+%\location{May 2018 – May 2020 | Potsdam, NY}
+%\begin{tightemize}
+%\item Handled incident and emergency maintenance reports and executed social, educational, and community service programs 
+%\item Training included Active Shooter, Crisis and Mental Health, Diversity and Inclusion, and Title IX and Sexual Assault
+%\end{tightemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -299,7 +253,103 @@ Agile Development
 %\end{tightemize}
 %\end{minipage}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{minipage} 
+\hfill
+\begin{minipage}[t]{0.29\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+\subsection{Clarkson University}
+\vspace{2mm}
+
+\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{M.S. Computer Science}
+
+\location{May 2022 | Potsdam, NY}
+\vspace{3mm}
+\begin{tightemize}
+\item \textbf{Summa cum laude}
+%\item \underline{GPA: 3.95/4.0}
+\end{tightemize}
+\vspace{2mm}
+
+\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{B.S. Computer Science} \newline
+\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{Minor in Mathematics} \newline
+\location{May 2020 | Potsdam, NY}
+%\sectionsep
+\begin{tightemize}
+\item \textbf{Honors Program}%, GPA: 3.72/4.0}
+\item \textbf{Magna cum laude}
+%\item \underline{1 year early graduation}
+%\item Graduated with distinction
+\item Presidential Scholar (Fall '19, Spring '18, '20)
+\item Dean's List (Fall '17, '18)
+
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\runsubsection{Programming} \newline
+Python | C++ | Docker | CMake
+
+\sectionsep
+\runsubsection{Technical Experience} \newline
+Software Engineering \newline
+Software Development \newline
+Agile Development %\newline 
+%Machine Shop Training
+\sectionsep
+
+\runsubsection{Software Experience} \newline
+SLURM | Git | KWIVER |\newline
+Overleaf/LaTex |\newline
+UNIX/Linux 
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     HONORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Honors}
+\textbf{National Grid Stipend} for Research Opportunities in Sustainable Energy
+\sectionsep
+
+\textbf{Honorable Mention Poster} Presentation in Computer Science and Engineering at Research and Project Showcase (RAPS)
+
+
+
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ADDITIONAL LEADERSHIP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Additional Leadership}
+TARS Research Team Leader \newline
+Resident Advisor \newline
+GE Intern Social Ambassador
+Teaching Assistant for Pre-Calc \newline
+Honors Webmaster \newline
+Honors Recruiter \& Peer Mentor \newline
+Society of Women Engineers
+
+
+
+\end{minipage} % END COLUMN 2
+
+
+
 \end{document}  \documentclass[]{article}
+
