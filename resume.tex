@@ -92,71 +92,85 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.70\textwidth}
+\begin{minipage}[t]{0.68\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Professional Experience}
+
+\runsubsection{Software Engineer, Machine Learning}
+\descript{| Red Hat}
+\location{June 2024 - present | Raleigh, NC}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Spearheaded the implementation of a critical pause-and-resume feature for Kserve models, enabling more efficient resource management and cost savings
+\item Engineered critical stability and observability features for new LLM-D inference services by implementing robust API schema validation and aggregating backend pool statuses, which simplified debugging and enabled reliable automation
+\item Resolved numerous high-impact bugs and CVEs, enhancing product security and stability across multiple releases
+\item Authored and maintained essential documentation for complex processes, including source synchronization, upstream release procedures, and local end-to-end testing, improving team efficiency and onboarding
+\item Developed and executed a new branch strategy for the team's repos, improving the development workflow and release process
+\end{tightemize}
+\sectionsep
+
 \runsubsection{Research and Development Engineer}
 \descript{| Kitware, Inc. }
-\location{May 2020 - present | Carrboro, NC}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\location{May 2020 - May 2024 | Carrboro, NC}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
 \item Head programmer and scrum master on the DARPA PTG Kitware team
 \item Contributed to Kitware’s open-source platforms (KWIVER, SMQTK, Girder) on the Computer Vision team
-    \vspace{3pt}
-    \begin{tightemize}
-    \item Kitware Image and Video Exploitation and Retrieval (KWIVER)
-    \item Social Multimedia Query ToolKit (SMQTK)
-    \end{tightemize}
-    \vspace{5pt}
-%\item Leads the training and development of machine learning models for our multi-task monitoring system 
-\item Handled machine learning experiments; Presents and documents results for evaluation with the team
+%    \vspace{3pt}
+%    \begin{tightemize}
+%    \item Kitware Image and Video Exploitation and Retrieval (KWIVER)
+%    \item Social Multimedia Query ToolKit (SMQTK)
+%    \end{tightemize}
+%    \vspace{5pt}
+%\item Led the training and development of machine learning models for our multi-task monitoring system 
+\item Handled machine learning experiments; Presented and documented results for evaluation with the team
 \item Integrated machine learning models into our ROS system for real-time deployment and testing
-\item Developed CI/CD pipelines on the IARPA HAYSTAC project's GitLab to perform code linting and formatting, build Docker containers, and build/publish Python packages
+%\item Developed CI/CD pipelines on the IARPA HAYSTAC project's GitLab to perform code linting and formatting, build Docker containers, and build/publish Python packages
 \item Containerized and integrated disinformation analytics into APIs for evaluation on the DARPA SemaFor project
-\item Developed Airflow DAGs to run via a Kubernetes cluster that read/write data on an AWS S3 bucket
+% \item Developed a website UI that displays the live system outputs in a clear and concise manner for debugging and demonstration purposes
+%\item Developed Airflow DAGs to run via a Kubernetes cluster that read/write data on an AWS S3 bucket
 \item Led the code review process on multiple teams, including teaching new interns about best software practices, the code review process, and agile development as the Intern Team Leader
 %\item Champions extensive documentation on projects, including Python typing, docstrings, and reproducible run guides
 %\item Managing shared machine resources using SLURM
 \end{tightemize}
 \sectionsep
 
-\runsubsection{Security Engineering Intern}
-\descript{| General Electric Power}
-\location{May 2019 - August 2019 | Schenectady, NY}
-\begin{tightemize}
+%\runsubsection{Security Engineering Intern}
+%\descript{| General Electric Power}
+%\location{May 2019 - August 2019 | Schenectady, NY}
+%\begin{tightemize}
 %\item Designed filters on the team's website that narrow down the results displayed for a more intuitive user interface
-\item Implemented a testing framework with Django and Selenium to enable the team to reach comprehensive test coverage
-\item Researched and wrote comprehensive documentation on different SAST tools for Python projects
+%\item Implemented a testing framework with Django and Selenium to enable the team to reach comprehensive test coverage
+%\item Researched and wrote comprehensive documentation on different SAST tools for Python projects
 %\item Researched solutions to automate engineers' roles to save business cost
 %\item Coordinated social events for other interns as the EID Social Ambassador
-\end{tightemize}
-\sectionsep
+%\end{tightemize}
+%\sectionsep
 
-\runsubsection{Research and Development Intern}
-\descript{| Kitware Inc.}
-\location{January 2019 – May 2019 | Clifton Park, NY}
-\begin{tightemize}
+%\runsubsection{Research and Development Intern}
+%\descript{| Kitware Inc.}
+%\location{January 2019 – May 2019 | Clifton Park, NY}
+%\begin{tightemize}
 %\item Translated Jetson's pedestrian detector and a FlyCapture image reader into C++/CMake KWIVER projects for Sprokit pipeline execution
 %    \vspace{3pt}
 %    \begin{tightemize}
 %    \item Stream Processing Toolkit (Sprokit)
 %    \end{tightemize}
 %    \vspace{5pt}
-\item Created a face detector based on KWIVER with C++ and Python examples
+%\item Created a face detector based on KWIVER with C++ and Python examples
 %\item Setup Clearpath's Jackal robot with a Jetson TX2 and ROS for autonomous deployment
-\item Developed Dockerfiles and Python scripts to setup Intel's OpenVino and Jetson's inference demos for performance analysis
-\end{tightemize}
-\sectionsep
+%\item Developed Dockerfiles and Python scripts to setup Intel's OpenVino and Jetson's inference demos for performance analysis
+%\end{tightemize}
+%\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     RESEARCH
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Research}
+
 \runsubsection{TARS, Terascale All-sensing Research Studio}
 \descript{}
 \location{October 2017 – May 2022 | Clarkson University}
@@ -181,20 +195,29 @@
 %     LEADERSHIP
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Leadership}
+
 \runsubsection{Scrum Master}
-\descript{| Kitware Inc.}
-\location{May 2023 - present | Carrboro, NC}
+\descript{| Red Hat}
+\location{January 2025 - present | Raleigh, NC}
 \begin{tightemize}
-\item Led scrum ceremonies, ensuring adherence to agile principles and facilitating an environment of trust within the team
-\item Adapted to evolving project needs while maintaining a focus on meeting project goals and balancing concurrent projects' timeline
+\item Expertly managed the team's agile framework by facilitating all scrum ceremonies, overseeing the entire Jira sprint lifecycle from planning to reporting, and authoring weekly leadership updates
+\item Drove significant process improvements by introducing mini-refinement groups, creating clearer Ready/Done checklists, and developing a workshop on writing effective impact statements to enhance team communication and efficiency
 \end{tightemize}
+
+%\runsubsection{Scrum Master}
+%\descript{| Kitware Inc.}
+%\location{May 2023 - present | Carrboro, NC}
+%\begin{tightemize}
+%\item Led scrum ceremonies, ensuring adherence to agile principles and facilitating an environment of trust within the team
+%\item Adapted to evolving project needs while maintaining a focus on meeting project goals and balancing concurrent projects' timeline
+%\end{tightemize}
 %\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     AWARDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % \section{Awards}
+
 % \begin{tabular}{rll}
 % 2015        & 99\textsuperscript{th} percentile & National Merit Scholarship Finalist\\
 % \end{tabular}
@@ -203,8 +226,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     PUBLICATIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % \section{Publications}
+
 % \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
 % \bibliographystyle{abbrv}
 % \bibliography{publications}
@@ -223,7 +246,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Education}
 
 \subsection{Clarkson University}
@@ -241,6 +263,7 @@
 
 % Bachelor's Degree
 \color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{B.S. Computer Science} 
+
 \color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{Minor in Mathematics} 
 
 \location{May 2020 | Potsdam, NY}
@@ -257,31 +280,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Skills}
+
 \subsection{Programming}
-Python | C++ | Docker | CMake
+\subsection{Languages}
+Golang | Python | C++ | \newline
+Docker | CMake
+\sectionsep
+
+\subsection{Software Experience}
+Kubernetes | Openshift | \newline
+Robot Operating System (ROS) | \newline
+SLURM |  \newline
+Overleaf/LaTex |\newline
+Git/Github | UNIX/Linux 
 \sectionsep
 
 \subsection{Technical Experience}
 Software Engineering \newline
-Software Development \newline
+Open Source Development \newline
 Agile Development \newline 
-Artificial Intelligence %\newline
+Artificial Intelligence \newline
+Containerization %\newline
 %Machine Shop Training
-\sectionsep
-
-\subsection{Software Experience}
-SLURM | Git/Github | ROS | \newline
-Overleaf/LaTex |\newline
-UNIX/Linux 
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     HONORS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Honors}
+
 \textbf{National Grid Stipend} for Research Opportunities in Sustainable Energy
 \sectionsep
 
@@ -292,25 +320,16 @@ UNIX/Linux
 %     ADDITIONAL LEADERSHIP
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Additional Leadership}
+
+Kitware's PTG Team's Scrum Master \newline
 Kitware's Intern Team Leader \newline
 TARS Research Team Leader \newline
 Resident Advisor \newline
 %GE Intern Social Ambassador
-Teaching Assistant for Pre-Calc \newline
+%Teaching Assistant for Pre-Calc \newline
 %Honors Webmaster \newline
 Honors Recruiter \& Peer Mentor \newline
 Society of Women Engineers
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Societies
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\section{Societies}
-%Association for Computing Machinery (ACM)\\
-%Scrum Alliance Certified ScrumMaster\\
-%University Honors College\\
-%National Merit Scholarship Finalist \\
 %\sectionsep
 
 
