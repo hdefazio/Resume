@@ -1,7 +1,8 @@
+%!TEX program = xelatex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Deedy - One Page Two Column Resume
 % LaTeX Template
-% Version 1.2 (16/9/2014)
+% Version 1.3 (22/9/2018)
 %
 % Original author:
 % Debarghya Das (http://debarghyadas.com)
@@ -9,25 +10,39 @@
 % Original repository:
 % https://github.com/deedydas/Deedy-Resume
 %
+% v1.3 author:
+% Zachary Taylor
+%
+% v1.3 repository:
+% https://github.com/ZDTaylor/Deedy-Resume-Reversed
+%
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
 %
 % This template uses several fonts not included with Windows/Linux by
 % default. If you get compilation errors saying a font is missing, find the line
 % on which the font is used and either change it to a font included with your
 % operating system or comment the line out to use the default font.
-% 
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 % TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
+% 1. Add various styling and section options and allow for multiple pages smoothly.
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % CHANGELOG:
+% v1.3:
+% 1. Removed MacFonts version as I have no desire to maintain it nor access to macOS
+% 2. Switched column ordering
+% 3. Changed font styles/colors for easier human readability
+% 4. Added, removed, and rearranged sections to reflect my own experience
+% 5. Hid last updated
+%
+% v1.2:
+% 1. Added publications in place of societies.
+% 2. Collapsed a portion of education.
+% 3. Fixed a bug with alignment of overflowing long last updated dates on the top right.
+%
 % v1.1:
 % 1. Fixed several compilation bugs with \renewcommand
 % 2. Got Open-source fonts (Windows/Linux support)
@@ -38,22 +53,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the
-% vertical limit
+% 1. Overflows onto second page if any column's contents are more than the vertical limit
 % 2. Hacky space on the first bullet point on the second column.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\documentclass[]{resume-formatting}
+\documentclass[]{deedy-resume-reversed}
 \usepackage{fancyhdr}
 \usepackage{fontawesome}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{hyperref}
 
 \pagestyle{fancy}
 \fancyhf{}
- 
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,18 +73,18 @@
 %     LAST UPDATED DATE
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\lastupdated
+% \lastupdated
+% 9/20/2025
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     TITLE NAME
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{Hannah}{DeFazio}{ 
+\namesection{Hannah DeFazio}{ 
 { \faEnvelope\ h2defazio@gmail.com | \faPhone\  315.944.7319 |
  \faLinkedinSquare\ \href{https://www.linkedin.com/in/hannah-defazio/}{hannah-defazio} | \faGithub\ \href{https://github.com/hdefazio}{hdefazio}  
 }}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -80,31 +92,34 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.7\textwidth} 
+\begin{minipage}[t]{0.70\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Professional Experience}
-
 \runsubsection{Research and Development Engineer}
-\descript{| Kitware Inc.}
+\descript{| Kitware, Inc. }
 \location{May 2020 - present | Carrboro, NC}
-\sectionsep
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
 \item Head programmer and scrum master on the DARPA PTG Kitware team
-\item Contributes to Kitware’s open-source platforms (KWIVER, SMQTK, Girder) on the Computer Vision team
+\item Contributed to Kitware’s open-source platforms (KWIVER, SMQTK, Girder) on the Computer Vision team
     \vspace{3pt}
     \begin{tightemize}
     \item Kitware Image and Video Exploitation and Retrieval (KWIVER)
     \item Social Multimedia Query ToolKit (SMQTK)
     \end{tightemize}
     \vspace{5pt}
-\item Leads the training and development of machine learning models for our multi-task monitoring system 
-\item Handles machine learning experiments; Presents and documents results for evaluation with the team
-\item Containerizes and integrates disinformation analytics into APIs for evaluation on the DARPA SemaFor project
-
+%\item Leads the training and development of machine learning models for our multi-task monitoring system 
+\item Handled machine learning experiments; Presents and documents results for evaluation with the team
+\item Integrated machine learning models into our ROS system for real-time deployment and testing
+\item Developed CI/CD pipelines on the IARPA HAYSTAC project's GitLab to perform code linting and formatting, build Docker containers, and build/publish Python packages
+\item Containerized and integrated disinformation analytics into APIs for evaluation on the DARPA SemaFor project
+\item Developed Airflow DAGs to run via a Kubernetes cluster that read/write data on an AWS S3 bucket
+\item Led the code review process on multiple teams, including teaching new interns about best software practices, the code review process, and agile development as the Intern Team Leader
+%\item Champions extensive documentation on projects, including Python typing, docstrings, and reproducible run guides
 %\item Managing shared machine resources using SLURM
 \end{tightemize}
 \sectionsep
@@ -112,7 +127,6 @@
 \runsubsection{Security Engineering Intern}
 \descript{| General Electric Power}
 \location{May 2019 - August 2019 | Schenectady, NY}
-%\sectionsep
 \begin{tightemize}
 %\item Designed filters on the team's website that narrow down the results displayed for a more intuitive user interface
 \item Implemented a testing framework with Django and Selenium to enable the team to reach comprehensive test coverage
@@ -126,16 +140,15 @@
 \descript{| Kitware Inc.}
 \location{January 2019 – May 2019 | Clifton Park, NY}
 \begin{tightemize}
-\item Translated Jetson's pedestrian detector and a FlyCapture image reader into C++/CMake KWIVER projects for Sprokit pipeline execution
-    \vspace{3pt}
-    \begin{tightemize}
-    \item Stream Processing Toolkit (Sprokit)
-    \end{tightemize}
-    \vspace{5pt}
+%\item Translated Jetson's pedestrian detector and a FlyCapture image reader into C++/CMake KWIVER projects for Sprokit pipeline execution
+%    \vspace{3pt}
+%    \begin{tightemize}
+%    \item Stream Processing Toolkit (Sprokit)
+%    \end{tightemize}
+%    \vspace{5pt}
 \item Created a face detector based on KWIVER with C++ and Python examples
 %\item Setup Clearpath's Jackal robot with a Jetson TX2 and ROS for autonomous deployment
 \item Developed Dockerfiles and Python scripts to setup Intel's OpenVino and Jetson's inference demos for performance analysis
-
 \end{tightemize}
 \sectionsep
 
@@ -145,7 +158,7 @@
 
 \section{Research}
 \runsubsection{TARS, Terascale All-sensing Research Studio}
-\descript{} 
+\descript{}
 \location{October 2017 – May 2022 | Clarkson University}
 \begin{tightemize}
 \item Developed tools to allow the allocation of nodes in a drone cluster to be determined by hardware quality and additional resources such as cameras [M.S. Thesis]
@@ -156,102 +169,46 @@
 \sectionsep
 
 %\runsubsection{CAMEL, Computer Architecture and Microprocessor Engineering Lab}
-%\descript{} 
+%\descript{}
 %\location{June 2017 – April 2018 | Clarkson University}
 %\begin{tightemize}
-%\item Solved dependencies for software installation on our heterogeneous high %performance computer cluster
-%\item Researched anomalies in data only exploits and the accuracy of hardware %performance counters
+%\item Solved dependencies for software installation on our heterogeneous high performance computer cluster
+%\item Researched anomalies in data only exploits and the accuracy of hardware performance counters
 %\end{tightemize}
 %\sectionsep
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     LEADERSHIP
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Leadership}
 \runsubsection{Scrum Master}
-\descript{| Kitware Inc}
+\descript{| Kitware Inc.}
 \location{May 2023 - present | Carrboro, NC}
 \begin{tightemize}
-\item Leads scrum ceremonies, ensuring adherence to agile principles and facilitating an environment of trust within the team
-\item Adapts to evolving project needs while maintaining a focus on meeting project goals and balancing concurrent projects' timelines
+\item Led scrum ceremonies, ensuring adherence to agile principles and facilitating an environment of trust within the team
+\item Adapted to evolving project needs while maintaining a focus on meeting project goals and balancing concurrent projects' timeline
 \end{tightemize}
-\sectionsep
-
-\runsubsection{Intern Team Leader}
-\descript{| Kitware Inc}
-\location{Summer 2023 | Carrboro, NC}
-\begin{tightemize}
-\item Onboarded and mentored interns on the code review process, good software practices, and creating a positive culture at Kitware
-\end{tightemize}
-\sectionsep
-
-%\runsubsection{Resident Advisor}
-%\descript{| Clarkson University}
-%\location{May 2018 – May 2020 | Potsdam, NY}
-%\begin{tightemize}
-%\item Handled incident and emergency maintenance reports and executed social, educational, and community service programs 
-%\item Training included Active Shooter, Crisis and Mental Health, Diversity and Inclusion, and Title IX and Sexual Assault
-%\end{tightemize}
-
+%\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     OTHER EXPERIENCE
+%     AWARDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Other Experience}
-%\runsubsection{Resident Advisor}
-%\descript{| Clarkson University}
-%\location{May 2018 – Present | Potsdam, NY}
-%\begin{tightemize}
-%\item Handled incident and emergency maintenance reports and executed social, educational, and community service programs 
-%\item Training included Active Shooter, Crisis and Mental Health, Diversity and Inclusion, and Title IX and Sexual Assault
-%\end{tightemize}
-%\sectionsep
 
-%\runsubsection{Teaching Assistant}
-%\descript{| Clarkson University}
-%\location{August 2019 - Present | Potsdam, NY}
-%\begin{tightemize}
-%\item Lead a recitation session for Pre-Calculus students
-%\end{tightemize}
+% \section{Awards}
+% \begin{tabular}{rll}
+% 2015        & 99\textsuperscript{th} percentile & National Merit Scholarship Finalist\\
+% \end{tabular}
+% \sectionsep
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Relevant Courses
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{minipage}[t]{0.55\linewidth} 
-%\section{Relevant Courses}
-%\runsubsection{Computer Science} 
-%\sectionsep
-%\begin{tightemize}
-%\runsubsection{\normalsize{Computer Vision (Fall '19)}} 
-%\descript{}
-%\runsubsection{\normalsize{Computer Graphics}} 
-%\descript{}
-%\runsubsection{\normalsize{Adv. Digital Circuit Design}} 
-%\descript{}
-%\runsubsection{\normalsize{Software Design \& Development}} 
-%\descript{}
-%\runsubsection{\normalsize{Computer Algorithms (Fall '19)}} 
-%\descript{}
-%%\end{tightemize}
-%\end{minipage}
-%\hfill
-%\begin{minipage}[t]{0.43\linewidth}
-%\sectionsep
-%\sectionsep
-%\sectionsep
-%\runsubsection{Mathematics}
-%\begin{tightemize}
-%\runsubsection{\normalsize{Applied Linear Algebra}}
-%\descript{}
-%\runsubsection{\normalsize{Automata Theory (Fall '19)}}
-%\descript{}
-%\runsubsection{\normalsize{Discrete Mathematics}}
-%\descript{}
-%\end{tightemize}
-%\end{minipage}
+% \section{Publications}
+% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -259,18 +216,19 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{minipage} 
+\end{minipage}
 \hfill
-\begin{minipage}[t]{0.29\textwidth} 
+\begin{minipage}[t]{0.29\textwidth}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Education}
+
 \subsection{Clarkson University}
 \vspace{2mm}
-
+% Master's Degree
 \color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{M.S. Computer Science}
 
 \location{May 2022 | Potsdam, NY}
@@ -281,10 +239,11 @@
 \end{tightemize}
 \vspace{2mm}
 
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{B.S. Computer Science} \newline
-\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{Minor in Mathematics} \newline
+% Bachelor's Degree
+\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{B.S. Computer Science} 
+\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{Minor in Mathematics} 
+
 \location{May 2020 | Potsdam, NY}
-%\sectionsep
 \begin{tightemize}
 \item \textbf{Honors Program}%, GPA: 3.72/4.0}
 \item \textbf{Magna cum laude}
@@ -292,7 +251,6 @@
 %\item Graduated with distinction
 \item Presidential Scholar (Fall '19, Spring '18, '20)
 \item Dean's List (Fall '17, '18)
-
 \end{tightemize}
 \sectionsep
 
@@ -301,55 +259,60 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Skills}
-\runsubsection{Programming} \newline
+\subsection{Programming}
 Python | C++ | Docker | CMake
-
 \sectionsep
-\runsubsection{Technical Experience} \newline
+
+\subsection{Technical Experience}
 Software Engineering \newline
 Software Development \newline
-Agile Development %\newline 
+Agile Development \newline 
+Artificial Intelligence %\newline
 %Machine Shop Training
 \sectionsep
 
-\runsubsection{Software Experience} \newline
-SLURM | Git | ROS | \newline
+\subsection{Software Experience}
+SLURM | Git/Github | ROS | \newline
 Overleaf/LaTex |\newline
 UNIX/Linux 
 \sectionsep
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     HONORS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Honors}
 \textbf{National Grid Stipend} for Research Opportunities in Sustainable Energy
 \sectionsep
 
 \textbf{Honorable Mention Poster} Presentation in Computer Science and Engineering at Research and Project Showcase (RAPS)
-
-
-
 \sectionsep
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     ADDITIONAL LEADERSHIP
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Additional Leadership}
+Kitware's Intern Team Leader \newline
 TARS Research Team Leader \newline
 Resident Advisor \newline
-GE Intern Social Ambassador
+%GE Intern Social Ambassador
 Teaching Assistant for Pre-Calc \newline
-Honors Webmaster \newline
+%Honors Webmaster \newline
 Honors Recruiter \& Peer Mentor \newline
 Society of Women Engineers
+\sectionsep
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Societies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Societies}
+%Association for Computing Machinery (ACM)\\
+%Scrum Alliance Certified ScrumMaster\\
+%University Honors College\\
+%National Merit Scholarship Finalist \\
+%\sectionsep
 
 
 \end{minipage} % END COLUMN 2
-
-
-
 \end{document}  \documentclass[]{article}
-
