@@ -23,33 +23,6 @@
 % on which the font is used and either change it to a font included with your
 % operating system or comment the line out to use the default font.
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% TODO:
-% 1. Add various styling and section options and allow for multiple pages smoothly.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CHANGELOG:
-% v1.3:
-% 1. Removed MacFonts version as I have no desire to maintain it nor access to macOS
-% 2. Switched column ordering
-% 3. Changed font styles/colors for easier human readability
-% 4. Added, removed, and rearranged sections to reflect my own experience
-% 5. Hid last updated
-%
-% v1.2:
-% 1. Added publications in place of societies.
-% 2. Collapsed a portion of education.
-% 3. Fixed a bug with alignment of overflowing long last updated dates on the top right.
-%
-% v1.1:
-% 1. Fixed several compilation bugs with \renewcommand
-% 2. Got Open-source fonts (Windows/Linux support)
-% 3. Added Last Updated
-% 4. Move Title styling into .sty
-% 5. Commented .sty file.
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Known Issues:
@@ -101,7 +74,7 @@
 \runsubsection{Software Engineer}
 \descript{| Red Hat}
 \location{June 2024 - present | Raleigh, NC}
-\vspace{2mm} % Hacky fix for awkward extra vertical space
+\vspace{2mm}
 
 \runsubsubsection{Ansible Cloud Automation}
 \location{}
@@ -128,56 +101,15 @@
 \runsubsection{Research and Development Engineer}
 \descript{| Kitware, Inc. }
 \location{May 2020 - May 2024 | Carrboro, NC}
-%\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
 \item Head programmer and scrum master on the DARPA PTG Kitware team
 \item Contributed to Kitware’s open-source platforms (KWIVER, SMQTK, Girder) on the Computer Vision team
-%    \vspace{3pt}
-%    \begin{tightemize}
-%    \item Kitware Image and Video Exploitation and Retrieval (KWIVER)
-%    \item Social Multimedia Query ToolKit (SMQTK)
-%    \end{tightemize}
-%    \vspace{5pt}
-%\item Led the training and development of machine learning models for our multi-task monitoring system 
 \item Handled machine learning experiments; Presented and documented results for evaluation with the team
 \item Integrated machine learning models into our ROS system for real-time deployment and testing
-%\item Developed CI/CD pipelines on the IARPA HAYSTAC project's GitLab to perform code linting and formatting, build Docker containers, and build/publish Python packages
 \item Containerized and integrated disinformation analytics into APIs for evaluation on the DARPA SemaFor project
-% \item Developed a website UI that displays the live system outputs in a clear and concise manner for debugging and demonstration purposes
-%\item Developed Airflow DAGs to run via a Kubernetes cluster that read/write data on an AWS S3 bucket
 \item Led the code review process on multiple teams, including teaching new interns about best software practices, the code review process, and agile development as the Intern Team Leader
-%\item Champions extensive documentation on projects, including Python typing, docstrings, and reproducible run guides
-%\item Managing shared machine resources using SLURM
 \end{tightemize}
 \sectionsep
-
-%\runsubsection{Security Engineering Intern}
-%\descript{| General Electric Power}
-%\location{May 2019 - August 2019 | Schenectady, NY}
-%\begin{tightemize}
-%\item Designed filters on the team's website that narrow down the results displayed for a more intuitive user interface
-%\item Implemented a testing framework with Django and Selenium to enable the team to reach comprehensive test coverage
-%\item Researched and wrote comprehensive documentation on different SAST tools for Python projects
-%\item Researched solutions to automate engineers' roles to save business cost
-%\item Coordinated social events for other interns as the EID Social Ambassador
-%\end{tightemize}
-%\sectionsep
-
-%\runsubsection{Research and Development Intern}
-%\descript{| Kitware Inc.}
-%\location{January 2019 – May 2019 | Clifton Park, NY}
-%\begin{tightemize}
-%\item Translated Jetson's pedestrian detector and a FlyCapture image reader into C++/CMake KWIVER projects for Sprokit pipeline execution
-%    \vspace{3pt}
-%    \begin{tightemize}
-%    \item Stream Processing Toolkit (Sprokit)
-%    \end{tightemize}
-%    \vspace{5pt}
-%\item Created a face detector based on KWIVER with C++ and Python examples
-%\item Setup Clearpath's Jackal robot with a Jetson TX2 and ROS for autonomous deployment
-%\item Developed Dockerfiles and Python scripts to setup Intel's OpenVino and Jetson's inference demos for performance analysis
-%\end{tightemize}
-%\sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     RESEARCH
@@ -189,62 +121,11 @@
 \location{October 2017 – May 2022 | Clarkson University}
 \begin{tightemize}
 \item Developed tools to allow the allocation of nodes in a drone cluster to be determined by hardware quality and additional resources such as cameras [M.S. Thesis]
-%\item Led a multidisciplinary 7 person team on creating the hardware architecture of an assistive robot prototype
 \item Led a multidisciplinary 7 person team on creating the hardware and software architecture of an assistive robot prototype [Honors Thesis]
 \item Performed system integration to demonstrate that the prototype robotic arm could be controlled based on whether a person was predicted to need assistance 
 \end{tightemize}
 \sectionsep
 
-%\runsubsection{CAMEL, Computer Architecture and Microprocessor Engineering Lab}
-%\descript{}
-%\location{June 2017 – April 2018 | Clarkson University}
-%\begin{tightemize}
-%\item Solved dependencies for software installation on our heterogeneous high performance computer cluster
-%\item Researched anomalies in data only exploits and the accuracy of hardware performance counters
-%\end{tightemize}
-%\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LEADERSHIP
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\section{Leadership}
-
-%\runsubsection{Scrum Master}
-%\descript{| Red Hat}
-%\location{January 2025 - present | Raleigh, NC}
-%\begin{tightemize}
-%\item Expertly managed the team's agile framework by facilitating all scrum ceremonies, overseeing the entire Jira sprint lifecycle from planning to reporting, and authoring weekly leadership updates
-%\item Drove significant process improvements by introducing mini-refinement groups, creating clearer Ready/Done checklists, and developing a workshop on writing effective impact statements to enhance team communication and efficiency
-%\end{tightemize}
-
-%\runsubsection{Scrum Master}
-%\descript{| Kitware Inc.}
-%\location{May 2023 - present | Carrboro, NC}
-%\begin{tightemize}
-%\item Led scrum ceremonies, ensuring adherence to agile principles and facilitating an environment of trust within the team
-%\item Adapted to evolving project needs while maintaining a focus on meeting project goals and balancing concurrent projects' timeline
-%\end{tightemize}
-%\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Awards}
-
-% \begin{tabular}{rll}
-% 2015        & 99\textsuperscript{th} percentile & National Merit Scholarship Finalist\\
-% \end{tabular}
-% \sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     PUBLICATIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Publications}
-
-% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
-% \bibliographystyle{abbrv}
-% \bibliography{publications}
-% \nocite{*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
