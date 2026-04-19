@@ -61,7 +61,7 @@ Last Updated on \today
 % Headings command
 \titleformat{\section}{
 \color{sectionheadings}
-\scshape\fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{10pt}{18pt}\selectfont \raggedright\uppercase}{}{0em}{}
+\scshape\fontspec[Path = fonts/lato/]{Lato-Reg}\fontsize{12pt}{18pt}\selectfont \raggedright\uppercase}{}{0em}{}
 
 % Subeadings command
 \titleformat{\subsection}{
@@ -69,6 +69,9 @@ Last Updated on \today
 
 \newcommand{\runsubsection}[1]{
 \color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+
+\newcommand{\runsubsubsection}{                                                          
+\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-BolIta}\fontsize{12pt}{10pt}\selectfont\bfseries}
 
 % Degree command
 \newcommand{\degree}[1]{
@@ -87,4 +90,3 @@ Last Updated on \today
 \newenvironment{tightemize}{
 \vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
 {\end{itemize}\vspace{-\topsep}}
-
